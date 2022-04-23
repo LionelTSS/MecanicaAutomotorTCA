@@ -416,6 +416,13 @@ footer {
         height: 400px;
         background-position: center center;
     }
+
+    .bottom {
+        text-align: center;
+        color: white;
+        position: relative;
+        top: 400px;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -466,11 +473,19 @@ footer {
 
     .info {
         margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.0);
     }
 
     footer {
         height: 400px;
         background-position: center center;
+    }
+
+    .bottom {
+        text-align: center;
+        color: white;
+        position: relative;
+        top: 400px;
     }
 }
 
