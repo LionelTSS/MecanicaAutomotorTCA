@@ -1,0 +1,510 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+
+    background-color: black;
+}
+
+/*-----------
+    NAVBAR
+------------*/
+
+.show {
+    display: flex !important;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li>a {
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px 15px;
+    text-decoration: none;
+
+    color: white;
+}
+
+nav ul li .link::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+
+    background-color: white;
+}
+
+nav ul li .link:hover::before {
+    transform: scaleX(1);
+}
+
+nav .menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+
+    background-color: white;
+}
+
+nav .menu a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+nav .menu a:hover {
+    background-color: black;
+    color: white;
+}
+
+nav .mobile {
+    display: none;
+    width: 100%;
+}
+
+nav .mobile .header {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+    background-color: black;
+}
+
+nav .mobile .header a {
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav .mobile .header #bmenu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+nav .mobile .links {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 200;
+
+    background-color: black;
+}
+
+nav .mobile .links a {
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    color: white;
+}
+
+nav .mobile .links a:hover {
+    font-size: 20px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    color: black;
+    background-color: white;
+}
+
+
+
+header {
+    background-image: url(../img/Cover.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+/*-----------
+    BANNER
+------------*/
+
+h2 {
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: -30px;
+    left: 0;
+
+    transform: scale(0.4) skewY(-20deg) rotate(20deg);
+
+    background-color: #83c5be;
+}
+
+#banner {
+    font-size: 1.8em;
+    text-align: center;
+    padding: 40px;
+    width: 500px;
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    right: 100px;
+    border-radius: 8px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.green-button {
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 40px;
+    background-color: #83c5be;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.green-button:hover {
+    background-color: #6ba59f;
+}
+
+.numero {
+    font-weight: bold;
+    color: #219ebc;
+    font-size: 40px;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------
+    VIDEOS
+------------*/
+
+.w-75 {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+
+}
+
+h3 {
+    font-size: 1.6em;
+    padding-top: 50px;
+
+    color: white;
+}
+
+#videos {
+    text-align: center;
+    padding: 50px 0;
+
+    background-image: url(../img/bg-videos.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+
+}
+
+#videos #slider #controls {
+    display: flex;
+    justify-content: center;
+}
+
+#videos #slider #controls #prev,
+#videos #slider #controls #next {
+    border: none;
+    height: 50px;
+    width: 80px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#videos #slider #controls #prev:hover,
+#videos #slider #controls #next:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+#videos #slider #current {
+    width: 1280px;
+    margin: 50px auto;
+    border: solid 1px #415a77;
+}
+
+#videos #slider #videos-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+
+#videos #slider #videos-container .item {
+    border: solid 2px #415a77;
+    cursor: pointer;
+    overflow: hidden;
+
+    min-width: 320px;
+    height: 180px;
+}
+
+#videos #slider #videos-container .item a {
+    position: relative;
+
+}
+
+#videos #slider #videos-container .item img {
+    object-fit: contain;
+    min-width: 320px;
+    height: 180px;
+    transition: opacity 0.3s ease;
+}
+
+#videos #slider #videos-container .item:hover img {
+    opacity: 0.5;
+    object-fit: contain;
+
+}
+
+#videos #slider #videos-container .item a::before {
+    font-family: "Material Icons";
+    font-size: 25px;
+    content: 'play_arrow';
+    color: white;
+    position: absolute;
+    display: block;
+    left: 135px;
+    top: -95px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/*-----------
+    Sobre mi
+------------*/
+#sobremi {
+    height: 100vh;
+    background-image: url(../img/bg-multiplayer.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.quiensoy {
+    text-decoration: none;
+    border: 0;
+    border-radius: 10px;
+
+    background-color: gray;
+    color: white;
+}
+
+.quiensoy:hover {
+    background-color: #6ba59f;
+}
+
+.info {
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 40px;
+    width: 600px;
+    margin-right: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+footer {
+    height: 800px;
+
+    background-image: url(../img/footer-darkmode.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media screen and (max-width: 1280px) {
+    nav {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #slider #current {
+        width: 80% !important;
+    }
+
+    #slider #current iframe {
+        height: 300px;
+    }
+
+    #slider #videos-container {
+        display: none !important;
+    }
+
+    .sobremi {
+        background-position: center left;
+    }
+
+    footer {
+        height: 400px;
+        background-position: center center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .link-hide {
+        display: none;
+    }
+
+    nav .more {
+        display: flex;
+    }
+
+    nav .menu {
+        margin-top: 48px;
+    }
+
+    header {
+        height: 60vh;
+    }
+
+    #banner {
+        position: initial !important;
+        z-index: 100;
+        width: 100%;
+    }
+
+    #slider #current {
+        width: 80% !important;
+    }
+
+    #slider #current iframe {
+        height: 300px;
+    }
+
+    #slider #videos-container {
+        display: none !important;
+    }
+
+    .sobremi {
+        background-position: -400px 0px;
+    }
+
+    .info {
+        margin: 0 auto;
+    }
+
+    footer {
+        height: 400px;
+        background-position: center center;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    nav {
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav .mobile {
+        display: block;
+    }
+
+    header {
+        background-position: center 40px;
+        height: 40vh;
+    }
+
+    #banner {
+        position: initial !important;
+        z-index: 100;
+        width: 100%;
+    }
+
+    #slider #current {
+        width: 80% !important;
+    }
+
+    #slider #current iframe {
+        height: 300px;
+    }
+
+    #slider #videos-container {
+        display: none !important;
+    }
+}
+
+.logoindex {
+    margin-top: 20px;
+}
