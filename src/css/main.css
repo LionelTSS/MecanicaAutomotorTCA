@@ -379,6 +379,13 @@ footer {
     background-size: cover;
 }
 
+.bottom {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 800px;
+}
+
 
 @media screen and (max-width: 1280px) {
     nav {
