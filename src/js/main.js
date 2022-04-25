@@ -16,6 +16,9 @@ const videos = [
     {
         id: "eU-9bJsnlzQ",
     },
+    {
+        id: "J-HWzigXUjw"
+    },
 ];
 
 const sliderContainer = document.querySelector('#slider');
